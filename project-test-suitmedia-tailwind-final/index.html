@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suitmedia Ideas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white text-gray-800">
+    <header id="main-header" class="fixed w-full bg-white/80 backdrop-blur-md shadow-md z-50 transition-transform">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="text-orange-500 font-bold text-lg">suit<span class="text-black">media</span></div>
+        <nav>
+          <ul class="flex gap-6 text-sm font-medium">
+            <li><a href="#" class="text-orange-500 border-b-2 border-orange-500">Ideas</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="h-[380px] bg-cover bg-center relative banner" style="background-image: url('https://via.placeholder.com/1200x400');">
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
+        <h1 class="text-4xl font-bold mb-2">Ideas</h1>
+        <p class="text-lg">Where all our great things begin</p>
+      </div>
+      <div class="absolute bottom-0 w-full h-12 bg-white -skew-y-2 origin-bottom"></div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+      <div class="flex justify-between items-center mb-6">
+        <div class="text-sm text-gray-600">Showing <span id="range"></span> of <span id="total"></span></div>
+        <div class="flex gap-4">
+          <select id="perPage" class="border rounded px-2 py-1 text-sm">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+          </select>
+          <select id="sortBy" class="border rounded px-2 py-1 text-sm">
+            <option value="-published_at">Newest</option>
+            <option value="published_at">Oldest</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="post-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+
+      <div id="pagination" class="flex justify-center mt-10 gap-1"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
